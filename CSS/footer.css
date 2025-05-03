@@ -1,0 +1,103 @@
+/* Simple Footer Style */
+.footer {
+    background-color: transparent;
+    position: relative;
+    font-family: var(--font-family);
+    padding-bottom: 30px;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, var(--primary-bg), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-copyright {
+    color: var(--third-color);
+    font-size: var(--font-sm);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-copyright:hover {
+    opacity: 1;
+}
+
+.footer-copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.footer-copyright a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-policy-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-policy-link {
+    color: var(--third-color);
+    font-size: var(--font-sm);
+    text-decoration: none;
+    transition: var(--transition);
+    opacity: 0.8;
+    position: relative;
+}
+
+.footer-policy-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.footer-policy-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.footer-policy-link:hover::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer-policy-links {
+        justify-content: center;
+    }
+}

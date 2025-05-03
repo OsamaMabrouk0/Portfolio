@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <meta name="description"
+        content="This is my personal portfolio showcasing my projects, skills, and contact information." />
+    <meta name="author" content="Osama Mabrouk" />
+    <meta name="theme-color" content="#2c6e49" />
+    <link rel="icon" href="assets/images/portfolio_Icon.webp" type="image/portfolio-icon" />
+    <!-- libs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/services.css">
+    <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="stylesheet" href="CSS/skills.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+
+</head>
+
+<body class="loading">
+    <!-- ================| Loading Screen |================ -->
+    <div class="loading-screen">
+        <div class="spinner" id="loader"></div>
+    </div>
+    <!-- ================| scrollTopBtn |================ -->
+    <button id="scrollTopBtn" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- ================| header |================ -->
+    <div class="hidden-content"></div>
+
+    <header class="main-header" id="mainHeader">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/Images/Portfolio_Logo.webp" alt="Portfolio Logo" class="logo-img" />
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                    <li><a href="#services"><i class="fas fa-tools"></i> Services</a></li>
+                    <li><a href="#skills"><i class="fas fa-brain"></i> Skills</a></li>
+                    <li><a href="#contact" class="contact-btn"><i class="fas fa-envelope"></i> Contact Me</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="bar 1"></span>
+                <span class="bar 2"></span>
+                <span class="bar 3"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================| pages |================ -->
+    <main>
+
+        <!-- ================| Home Section |================ -->
+        <section id="home" class="home">
+            <div class="canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+
+            <div class="glowing-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
+            <div class="content">
+                <div class="hero-header">
+                    <div class="animated-text">
+                        <span class="static-text">I'm a</span>
+                        <span class="dynamic-text"></span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="word">Turning</span>
+                        <span class="word">Ideas</span>
+                        <span class="word">Into</span>
+                        <span class="word highlight">Digital</span>
+                        <span class="word highlight">Reality</span>
+                    </h1>
+
+                    <div class="hero-description">
+                        <p>Crafting innovative web & app experiences that merge aesthetics with functionality</p>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-btn">
+                        <span class="btn-text">Explore Projects</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn secondary-btn">
+                        <span class="btn-text">Let's Connect</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M21 5H3C1.89543 5 1 5.89543 1 7V17C1 18.1046 1.89543 19 3 19H21C22.1046 19 23 18.1046 23 17V7C23 5.89543 22.1046 5 21 5Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 7L12 13L23 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="tech-stack">
+                    <div class="tech-label">Tech Stack</div>
+                    <div class="tech-icons">
+                        <div class="tech-icon" data-tooltip="HTML5">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <div class="tech-icon" data-tooltip="CSS3">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-icon" data-tooltip="JavaScript">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <div class="tech-icon more-btn" data-tooltip="Skills">
+                            <a href="#skills">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <a href="#about" class="mouse-link">
+                    <div class="mouse">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================| About Section |================ -->
+        <section id="about" class="about">
+            <!-- Background Elements -->
+            <div class="about-bg-elements">
+                <div class="about-shape about-shape-1"></div>
+                <div class="about-shape about-shape-2"></div>
+            </div>
+
+            <!-- About Container -->
+            <div class="about-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better - my background, experience, and what drives me
+                    </p>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content">
+                    <!-- Profile Image Side -->
+                    <div class="about-image-container">
+                        <div class="about-image-frame">
+                            <img src="assets/Images/Portfolio_Image.webp" alt="Profile" class="profile-img">
+                            <div class="about-image-badges">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Info Side -->
+                    <div class="about-info">
+                        <span class="about-greeting">Hello, I'm</span>
+                        <h3 class="about-name">Osama Mabrouk</h3>
+                        <div class="about-job">Web & App Developer & Designer</div>
+
+                        <div class="about-bio">
+                            <p>I'm a passionate <span class="highlighted-text">Full Stack Developer</span> with a focus
+                                on creating beautiful, functional, and user-centered digital experiences. With <span
+                                    class="highlighted-text">5+ years of experience</span> in web & app development, I
+                                am
+                                always looking to improve my skills and stay up-to-date with the latest technologies. I
+                                also leverage <span class="highlighted-text">Artificial Intelligence</span> to enhance
+                                and accelerate the development of my projects.</p>
+
+                            <p>My approach combines technical expertise with creative problem-solving. I believe in
+                                crafting <span class="highlighted-text">clean, efficient code</span> and intuitive user
+                                experiences that help <span class="highlighted-text">individuals and businesses</span>
+                                achieve their goals effectively and smartly.</p>
+                        </div>
+
+
+                        <!-- About Stats -->
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">20+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-label">Client Satisfaction</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">5+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <strong>Email</strong>
+                                    osamamabrouk015@gmail.com
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <strong>Phone</strong>
+                                    +20 1229288395
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <strong>Website</strong>
+                                    slash.dev (coming soon)
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <strong>Location</strong>
+                                    Alexandria, Egypt
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CV Download Button -->
+                        <a href="assets/Documents/SLASH_CV.pdf" class="cv-button">
+                            <span class="btn-text">Download CV</span>
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================| Projects Section |================ -->
+        <section id="projects" class="projects">
+            <!-- Background Elements -->
+            <div class="projects-bg-elements">
+                <div class="project-shape project-shape-1"></div>
+                <div class="project-shape project-shape-2"></div>
+            </div>
+
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">A showcase of my recent work and creative innovations</p>
+            </div>
+
+            <!-- Projects Filter -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="app">App Development</button>
+                <button class="filter-btn" data-filter="ui" hidden>UI/UX Design</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+                <!-- DOF3TNA_V2 Card  -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img-container">
+                        <img src="assets/Images/DOF3TNA_V2.webp" alt="Educational Platform" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/DOF3TNA-V2" target="_blank"
+                                    class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://DOF3TNA.great-site.net" target="_blank" class="project-link"
+                                    title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Educational Platform</h3>
+                        <p class="project-description">
+                            DOF3TNA is a custom-built educational platform designed to support students by providing
+                            lecture materials, summaries, videos, a building map, statistics page, and schedule section
+                            — all in one responsive and user-friendly interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOF3TNA_V2 App Card -->
+                <div class="project-card" data-category="app">
+                    <div class="project-img-container">
+                        <img src="assets/Images/DOF3TNA-v2-App.webp" alt="DOF3TNA V2 Android App" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/DOF3TNA-v2-App" target="_blank"
+                                    class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/DOF3TNA-v2-App/releases/download/v2.0.0/DOF3TNA-v2.apk"
+                                    target="_blank" class="project-link" title="Download APK">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">DOF3TNA Android App</h3>
+                        <p class="project-description">
+                            DOF3TNA is a custom-built Android application designed to support students by providing
+                            lecture materials, summaries, videos, a building map, a statistics page, and a schedule
+                            section — all in one responsive and user-friendly interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ElResala Card -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img-container">
+                        <img src="assets/Images/ElResala.webp" alt="ElResala Religious App" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/ElResala" target="_blank" class="project-link"
+                                    title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://osamamabrouk0.github.io/ElResala/" target="_blank" class="project-link"
+                                    title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">ElResala Religious Web</h3>
+                        <p class="project-description">
+                            ElResala is a web-based Islamic platform designed to spread knowledge and guidance. It
+                            provides users with access to daily supplications, prayer times, Quranic verses, and
+                            religious articles, all through a clean and responsive user interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ElResala App Card -->
+                <div class="project-card" data-category="app">
+                    <div class="project-img-container">
+                        <img src="assets/Images/ElResala-App.webp" alt="ElResala Religious App" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/ElResala-App" target="_blank"
+                                    class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/ElResala-App/releases/download/1.0.0/ElResala-v1.apk"
+                                    target="_blank" class="project-link" title="Download APK">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">ElResala Religious App</h3>
+                        <p class="project-description">
+                            ElResala is an Islamic Android application offering essential daily religious tools such as
+                            prayer times, daily Azkar, Quranic verses, and inspirational content—all in a smooth,
+                            lightweight user interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card  -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img-container">
+                        <img src="assets/Images/Slash Portfolio.webp" alt="Educational Platform" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/Slash-Portfolio" target="_blank"
+                                    class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://osamamabrouk0.github.io/slash-portfolio/" target="_blank"
+                                    class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Slash Portfolio</h3>
+                        <p class="project-description">
+                            Slash Portfolio is a stylish, dark-themed personal portfolio website designed to showcase a
+                            developers projects, skills, and contact information. It features smooth transitions,
+                            responsive design, filterable project categories, and interactive animations for a
+                            professional and modern presentation.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link-Box Card  -->
+                <div class="project-card" data-category="web">
+                    <div class="project-img-container">
+                        <img src="assets/Images/Link-Box.webp" alt="Educational Platform" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/OsamaMabrouk0/Link-Box" target="_blank" class="project-link"
+                                    title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://osamamabrouk0.github.io/Link-Box/" target="_blank" class="project-link"
+                                    title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Link-Box</h3>
+                        <p class="project-description">
+                            Link-Box is a simple yet powerful web app designed to help users organize, manage, and track
+                            their favorite links. It allows you to save, categorize, and easily access your links with
+                            features like custom categories, importance marking, and a smooth UI for an enhanced user
+                            experience.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- View More Projects Button -->
+            <div class="view-more-container">
+                <button class="view-more-btn">
+                    <span class="btn-text">View More Projects</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Project Modal -->
+            <div class="project-modal" id="projectModal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-body">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================| Services Section |================ -->
+        <section id="services" class="services">
+            <!-- Background Elements -->
+            <div class="services-bg-elements">
+                <div class="services-shape services-shape-1"></div>
+                <div class="services-shape services-shape-2"></div>
+            </div>
+
+            <!-- Services Container -->
+            <div class="services-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">My Services</h2>
+                    <p class="section-subtitle">Professional solutions tailored to meet your digital needs</p>
+                </div>
+
+                <!-- Services Content -->
+                <div class="services-content">
+                    <!-- Service Item 1: Web Development - Laptop/Monitor Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">Building responsive, modern websites with clean code and
+                            exceptional user experience. Utilizing the latest technologies to create custom solutions.
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-item">Responsive Design</span>
+                            <span class="feature-item">Frontend Development</span>
+                            <span class="feature-item">Backend Integration</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 2: App Development - Mobile Phone Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">App Development</h3>
+                        <p class="service-description">Creating native and cross-platform mobile applications with
+                            intuitive interfaces and robust functionality for businesses and individuals.</p>
+                        <div class="service-features">
+                            <span class="feature-item">iOS & Android</span>
+                            <span class="feature-item">React Native</span>
+                            <span class="feature-item">Flutter</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 3: UI/UX Design - Pen Tool Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">Creating beautiful, intuitive interfaces with a focus on user
+                            experience, accessibility, and visual appeal to enhance user engagement.</p>
+                        <div class="service-features">
+                            <span class="feature-item">User Research</span>
+                            <span class="feature-item">Wireframing</span>
+                            <span class="feature-item">Prototyping</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 4: AI Integration - Robot Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                stroke-linecap="round" stroke-linejoin="round" width="55" height="55">
+                                <rect x="3" y="10" width="18" height="12" rx="2" ry="2" />
+                                <circle cx="8" cy="15" r="1.2" />
+                                <circle cx="16" cy="15" r="1.2" />
+                                <path d="M9 19h6" />
+                                <path d="M10 17h4" />
+                                <path d="M12 10V6" />
+                                <circle cx="12" cy="5" r="1" />
+                                <path d="M3 14v-1a2 2 0 0 1 2-2h1" />
+                                <path d="M21 14v-1a2 2 0 0 0-2-2h-1" />
+                                <path d="M7 22v-2" />
+                                <path d="M12 22v-2" />
+                                <path d="M17 22v-2" />
+                            </svg>
+
+                        </div>
+                        <h3 class="service-title">AI Integration</h3>
+                        <p class="service-description">Leveraging artificial intelligence to enhance applications with
+                            smart features, automation, and data analysis for improved functionality.</p>
+                        <div class="service-features">
+                            <span class="feature-item">ML Models</span>
+                            <span class="feature-item">Chatbots</span>
+                            <span class="feature-item">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 5: E-Commerce Solutions - Shopping Cart Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">E-Commerce Solutions</h3>
+                        <p class="service-description">Building online stores with secure payment integration, inventory
+                            management, and user-friendly interfaces to boost your business online.</p>
+                        <div class="service-features">
+                            <span class="feature-item">Online Stores</span>
+                            <span class="feature-item">Payment Gateway</span>
+                            <span class="feature-item">Inventory System</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 6: Custom Solutions - Tools Icon -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Custom Solutions</h3>
+                        <p class="service-description">Developing tailored software solutions to address specific
+                            business challenges and requirements with scalable architecture.</p>
+                        <div class="service-features">
+                            <span class="feature-item">Business Analysis</span>
+                            <span class="feature-item">Custom Development</span>
+                            <span class="feature-item">Technical Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="services-cta">
+                    <a href="#contact" class="service-button">
+                        <span class="btn-text">Request a Service</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================| Skills Section |================ -->
+        <section id="skills" class="skills">
+            <!-- Background Elements -->
+            <div class="skills-bg-elements">
+                <div class="skill-shape skill-shape-1"></div>
+                <div class="skill-shape skill-shape-2"></div>
+            </div>
+
+            <div class="skills-container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <p class="section-subtitle">A comprehensive overview of my technical expertise and professional
+                        abilities</p>
+                </div>
+
+                <!-- Skills Layout -->
+                <div class="skills-layout">
+
+                    <!-- Technical Skills -->
+                    <div class="technical-skills">
+                        <h3 class="skills-category-title">
+                            <i class="fas fa-code"></i>
+                            Technical Skills
+                        </h3>
+
+                        <div class="skills-group">
+                            <!-- Frontend Development -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-header">
+                                    <i class="fas fa-laptop-code"></i>
+                                    Frontend Development
+                                </h4>
+                                <div class="skill-bars">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">HTML5</span>
+                                            <span class="skill-percentage">97%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 97%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">CSS3</span>
+                                            <span class="skill-percentage">95%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">JavaScript</span>
+                                            <span class="skill-percentage">88%%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 88%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Backend Development -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-header">
+                                    <i class="fas fa-server"></i>
+                                    Backend Development
+                                </h4>
+                                <div class="skill-bars">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">PHP</span>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">MYSQL</span>
+                                            <span class="skill-percentage">88%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 88%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Development -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-header">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Mobile Development
+                                </h4>
+                                <div class="skill-bars">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Dart</span>
+                                            <span class="skill-percentage">82%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 82%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Flutter</span>
+                                            <span class="skill-percentage">71%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 71%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Kotlin</span>
+                                            <span class="skill-percentage">79%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 79%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UI/UX Design -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-header">
+                                    <i class="fas fa-paint-brush"></i>
+                                    UI/UX Design
+                                </h4>
+                                <div class="skill-bars">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Figma</span>
+                                            <span class="skill-percentage">40%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Canva</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-bar" style="--percentage: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Skills as Tags -->
+                        <div class="skills-tags-container">
+                            <h4 class="skills-tags-title">Additional Skills & Technologies</h4>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Laravel</span>
+                                <span class="skill-tag">Bootstrap</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Material UI</span>
+                                <span class="skill-tag">API</span>
+                                <span class="skill-tag">GitHub</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">UI/UX</span>
+                                <span class="skill-tag">Responsive Design</span>
+                                <span class="skill-tag">Adobe Photoshop</span>
+                                <span class="skill-tag">Adobe Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="soft-skills">
+                        <h3 class="skills-category-title">
+                            <i class="fas fa-brain"></i>
+                            Soft Skills
+                        </h3>
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Team Collaboration</h4>
+                                    <p class="soft-skill-description">Effective work in diverse teams with strong
+                                        communication skills</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Project Management</h4>
+                                    <p class="soft-skill-description">Coordinating tasks and timelines for successful
+                                        project completion</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Problem Solving</h4>
+                                    <p class="soft-skill-description">Analytical approach to solving complex technical
+                                        challenges</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Communication</h4>
+                                    <p class="soft-skill-description">Clear and effective information sharing with
+                                        clients and team members</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Time Management</h4>
+                                    <p class="soft-skill-description">Efficient prioritization and delivery of tasks
+                                        within deadlines</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="soft-skill-info">
+                                    <h4 class="soft-skill-name">Continuous Learning</h4>
+                                    <p class="soft-skill-description">Staying updated with latest technologies and
+                                        industry trends</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="skills-tools">
+                        <h3 class="skills-category-title">
+                            <i class="fas fa-tools"></i>
+                            Tools & Technologies
+                        </h3>
+                        <div class="tools-grid">
+                            <!-- HTML5 -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">HTML5</span>
+                            </div>
+
+                            <!-- CSS3 -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">CSS3</span>
+                            </div>
+
+                            <!-- JavaScript -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">JavaScript</span>
+                            </div>
+
+                            <!-- Tailwind CSS -->
+                            <div class="tool-item">
+                                <img src="https://www.svgrepo.com/show/374118/tailwind.svg" alt="Tailwind CSS"
+                                    class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Tailwind</span>
+                            </div>
+
+                            <!-- Bootstrap -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                    alt="Bootstrap" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Bootstrap</span>
+                            </div>
+
+                            <!-- PHP -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                    alt="PHP" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">PHP</span>
+                            </div>
+
+                            <!-- MySQL -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">MySQL</span>
+                            </div>
+
+                            <!-- Flutter -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                    alt="Flutter" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Flutter</span>
+                            </div>
+
+                            <!-- Dart -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                                    alt="Dart" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Dart</span>
+                            </div>
+
+                            <!-- Kotlin -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                                    alt="Kotlin" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Kotlin</span>
+                            </div>
+
+                            <!-- VS Code -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                    alt="VS Code" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">VS Code</span>
+                            </div>
+
+                            <!-- Android Studio -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+                                    alt="Android Studio" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Android Studio</span>
+                            </div>
+
+                            <!-- Git -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Git</span>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt="GitHub" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">GitHub</span>
+                            </div>
+
+                            <!-- Figma -->
+                            <div class="tool-item">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                    alt="Figma" class="tool-icon" style="width: 30px; height: 30px;">
+                                <span class="tool-name">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================| Contact Section |================ -->
+        <section id="contact" class="contact">
+            <!-- Background Elements -->
+            <div class="contact-bg-elements">
+                <div class="contact-shape contact-shape-1"></div>
+                <div class="contact-shape contact-shape-2"></div>
+            </div>
+
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Let's discuss your project and bring your ideas to life</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="card-header">
+                            <h3>Let's Talk</h3>
+                            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of
+                                your visions.</p>
+                        </div>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>Location</h4>
+                                    <p>Alexandria, Egypt</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>Email</h4>
+                                    <p>osamamabrouk015@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>Phone</h4>
+                                    <p>+20 1229288395</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Connect With Me</h4>
+                            <div class="social-icons">
+                                <a href="https://github.com/OsamaMabrouk0" target="_blank" class="social-icon" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/1ZVHgZu2J1/" target="_blank" class="social-icon" aria-label="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://wa.me/201229288395" target="_blank" class="social-icon" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://t.me/OsamaMabrouk" target="_blank" class="social-icon" aria-label="Telegram">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Map Location -->
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Alexandria, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3>Send Me a Message</h3>
+                        <p>Have a question or want to work together? Drop me a message!</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="text" id="name" name="name" required class="form-input">
+                                <label for="name" class="form-label">Your Name</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="email" id="email" name="email" required class="form-input">
+                                <label for="email" class="form-label">Your Email</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input type="text" id="subject" name="subject" required class="form-input">
+                                <label for="subject" class="form-label">Subject</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-container textarea-container">
+                                <textarea id="message" name="message" required
+                                    class="form-input form-textarea"></textarea>
+                                <label for="message" class="form-label">Your Message</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                &copy; <span id="current-year">2025</span> All rights reserved | Designed by <a href="#">Osama
+                    Mabrouk</a>
+            </div>
+            <div class="footer-policy-links">
+                <a href="#" class="footer-policy-link">Privacy Policy</a>
+                <a href="#" class="footer-policy-link">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- JavaScript Files -->
+    <script src="JS/main.js"></script>
+    <script src="JS/home.js"></script>
+    <script src="JS/about.js"></script>
+    <script src="JS/services.js"></script>
+    <script src="JS/projects.js"></script>
+    <script src="JS/skills.js"></script>
+    <script src="JS/contact.js"></script>
+    <script src="JS/footer.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</body>
+
+</html>
+
+

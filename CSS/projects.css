@@ -1,0 +1,588 @@
+/* Projects Section Styles */
+.projects {
+    position: relative;
+    padding: 100px 0;
+    background-color: var(--secondary-bg);
+    overflow: hidden;
+}
+
+/* Background Elements */
+.projects-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.project-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+}
+
+.project-shape-1 {
+    top: -10%;
+    left: -5%;
+    width: 30%;
+    height: 40%;
+    background: var(--primary-color);
+    animation: floatProjectShape 20s ease-in-out infinite alternate;
+}
+
+.project-shape-2 {
+    bottom: -10%;
+    right: -5%;
+    width: 25%;
+    height: 35%;
+    background: var(--secondary-color);
+    animation: floatProjectShape 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatProjectShape {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(20px, 30px) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(-20px, 10px) rotate(-5deg);
+    }
+}
+
+/* Section Header */
+.projects .section-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.projects .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.projects .section-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.projects .section-subtitle {
+    font-size: var(--font-md);
+    color: var(--third-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Filter */
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background-color: rgba(30, 41, 59, 0.7);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    font-size: var(--font-sm);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    background-color: rgba(44, 110, 73, 0.2);
+    border-color: var(--primary-color);
+    transform: var(--hover-translate-up);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 4px 12px rgba(44, 110, 73, 0.3);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Project Card */
+.project-card {
+    background-color: rgba(30, 41, 59, 0.7);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpProject 0.8s forwards;
+}
+
+.project-card:hover {
+    transform: var(--hover-translate-up);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeUpProject {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply staggered animation to project cards */
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.7s;
+}
+
+/* Project Image Container */
+.project-img-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+/* Project Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Project Actions */
+.project-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: var(--font-md);
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.project-card:hover .project-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-link:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.project-link:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.project-link:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.project-link:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* Project Info */
+.project-info {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: var(--font-lg);
+    color: var(--white-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: var(--font-sm);
+    color: var(--third-color);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Project Tech Tags */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    font-size: var(--font-xs);
+    background-color: rgba(44, 110, 73, 0.15);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+}
+
+.project-card:hover .tech-tag {
+    background-color: rgba(44, 110, 73, 0.25);
+}
+
+/* View More Button */
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.view-more-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-sm);
+    padding: var(--padding-md) var(--padding-lg);
+    background-color: transparent;
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    font-size: var(--font-md);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.view-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: -1;
+}
+
+.view-more-btn:hover::before {
+    transform: translateX(0);
+}
+
+.view-more-btn .btn-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--secondary-bg);
+    width: 90%;
+    max-width: 900px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.project-modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.close-modal:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+    color: var(--white-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .projects .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-filter {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: var(--font-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
+        gap: 10px;
+    }
+
+    .project-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* إضافة تنسيق لروابط مشاريع GitHub وLive Demo */
+
+/* تنسيق روابط المشروع داخل النافذة المنبثقة */
+.modal-project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.modal-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-md);
+    transition: all 0.3s ease;
+}
+
+.modal-link i {
+    font-size: 18px;
+}
+
+/* تنسيق رابط GitHub */
+.github-link {
+    background-color: #24292e; /* لون GitHub الرسمي */
+    color: var(--white-color);
+}
+
+.github-link:hover {
+    background-color: #2f363d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق رابط العرض التجريبي */
+.demo-link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.demo-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* تحسين تنسيق النافذة المنبثقة */
+.modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-project-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.modal-project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modal-project-img:hover img {
+    transform: scale(1.03);
+}
+
+.modal-project-title {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: var(--white-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.modal-project-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 1.5px;
+}
+
+/* تحسين مظهر وحدات التقنية */
+.modal-project-tech .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.modal-project-tech .tech-tag {
+    font-size: var(--font-sm);
+    padding: 5px 12px;
+}
+
+/* تكيف مع الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .modal-project-links {
+        flex-direction: column;
+    }
+    
+    .modal-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
